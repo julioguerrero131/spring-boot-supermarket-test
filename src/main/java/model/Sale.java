@@ -13,15 +13,15 @@ import java.util.List;
 @Getter @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-public class Venta {
+public class Sale {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    private LocalDate fecha;
-    private String estado;
+    private LocalDate date;
+    private String state;
     private Double total;
     @ManyToOne
-    private Sucursal sucursal;
-    @OneToMany (mappedBy = "venta")
-    private List<DetalleVenta> detalle = new ArrayList<>();
+    private Branch branch;
+    @OneToMany (mappedBy = "sale")
+    private List<SaleDetail> detail = new ArrayList<>();
 }

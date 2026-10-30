@@ -7,10 +7,8 @@ import lombok.Setter;
 
 @Getter @Setter
 @NoArgsConstructor @AllArgsConstructor
-public class ProductoDTO {
+public class BranchDTO {
     private Long id;
-    private String nombre;
-    private String categoria;
-    private Double precio;
-    private Integer cantidad;
+    private String name;
+    private String address;
 }

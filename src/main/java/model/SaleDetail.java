@@ -12,18 +12,18 @@ import lombok.Setter;
 @Getter @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-public class DetalleVenta {
+public class SaleDetail {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     // Venta
     @ManyToOne
-    private Venta venta;
+    private Sale sale;
 
     // Producto
     @ManyToOne
-    private Producto prod;
+    private Product prod;
     private Integer cantProd;
-    private Double precio;
+    private Double price;
 }

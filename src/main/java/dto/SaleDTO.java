@@ -10,17 +10,17 @@ import java.util.List;
 
 @Getter @Setter
 @NoArgsConstructor @AllArgsConstructor
-public class VentaDTO {
+public class SaleDTO {
     // Datos Venta
     private Long id;
-    private LocalDate fecha;
-    private String estado;
+    private LocalDate date;
+    private String state;
 
     // Datos Sucursal
-    private Long idSucursal;
+    private Long branchId;
 
     // Lista Detalles
-    private List<DetalleVentaDTO> detalle;
+    private List<SaleDetailDTO> detail;
 
     // Total
     private Double total;

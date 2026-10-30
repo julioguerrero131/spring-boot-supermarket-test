@@ -7,10 +7,10 @@ import lombok.Setter;
 
 @Getter @Setter
 @NoArgsConstructor @AllArgsConstructor
-public class DetalleVentaDTO {
+public class SaleDetailDTO {
     private Long id;
-    private String nomProd;
-    private Integer cantProd;
-    private Double precio;
+    private String nameProd;
+    private Integer quantProd;
+    private Double price;
     private Double subtotal;
 }

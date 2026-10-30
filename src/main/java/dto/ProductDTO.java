@@ -7,8 +7,10 @@ import lombok.Setter;
 
 @Getter @Setter
 @NoArgsConstructor @AllArgsConstructor
-public class SucursalDTO {
+public class ProductDTO {
     private Long id;
-    private String nombre;
-    private String direccion;
+    private String name;
+    private String category;
+    private Double price;
+    private Integer quantity;
 }
