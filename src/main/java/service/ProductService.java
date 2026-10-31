@@ -16,7 +16,7 @@ public class ProductService implements IProductService {
     private ProductRepository repo;
 
     @Override
-    public List<ProductDTO> getProduct() {
+    public List<ProductDTO> getProducts() {
         return repo.findAll().stream().map(Mapper::toDTO).toList();
     }
 
