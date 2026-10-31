@@ -24,6 +24,7 @@ public class SaleDetail {
     // Producto
     @ManyToOne
     private Product prod;
+
     private Integer quantProd;
     private Double price;
 }
