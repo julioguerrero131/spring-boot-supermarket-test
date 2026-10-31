@@ -23,5 +23,5 @@ public class Sale {
     @ManyToOne
     private Branch branch;
     @OneToMany (mappedBy = "sale")
-    private List<SaleDetail> detail = new ArrayList<>();
+    private List<SaleDetail> details = new ArrayList<>();
 }
