@@ -1,15 +1,13 @@
 package dto;
 
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
 
 import java.time.LocalDate;
 import java.util.List;
 
 @Getter @Setter
 @NoArgsConstructor @AllArgsConstructor
+@Builder
 public class SaleDTO {
     // Datos Venta
     private Long id;
@@ -20,7 +18,7 @@ public class SaleDTO {
     private Long branchId;
 
     // Lista Detalles
-    private List<SaleDetailDTO> detail;
+    private List<SaleDetailDTO> details;
 
     // Total
     private Double total;
