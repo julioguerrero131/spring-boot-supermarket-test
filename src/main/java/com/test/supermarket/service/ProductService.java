@@ -1,12 +1,12 @@
-package service;
+package com.test.supermarket.service;
 
-import dto.ProductDTO;
-import exception.NotFoundException;
-import maper.Mapper;
-import model.Product;
+import com.test.supermarket.dto.ProductDTO;
+import com.test.supermarket.exception.NotFoundException;
+import com.test.supermarket.mapper.Mapper;
+import com.test.supermarket.model.Product;
+import com.test.supermarket.repository.ProductRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import repository.ProductRepository;
 
 import java.util.List;
 

@@ -1,6 +1,6 @@
-package service;
+package com.test.supermarket.service;
 
-import dto.ProductDTO;
+import com.test.supermarket.dto.ProductDTO;
 
 import java.util.List;
 

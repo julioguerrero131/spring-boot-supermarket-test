@@ -1,23 +1,23 @@
-package service;
+package com.test.supermarket.service;
 
-import dto.SaleDTO;
-import dto.SaleDetailDTO;
-import exception.NotFoundException;
-import maper.Mapper;
-import model.Branch;
-import model.Product;
-import model.Sale;
-import model.SaleDetail;
+import com.test.supermarket.dto.SaleDTO;
+import com.test.supermarket.dto.SaleDetailDTO;
+import com.test.supermarket.exception.NotFoundException;
+import com.test.supermarket.mapper.Mapper;
+import com.test.supermarket.model.Branch;
+import com.test.supermarket.model.Product;
+import com.test.supermarket.model.Sale;
+import com.test.supermarket.model.SaleDetail;
+import com.test.supermarket.repository.BranchRepository;
+import com.test.supermarket.repository.ProductRepository;
+import com.test.supermarket.repository.SaleRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import repository.BranchRepository;
-import repository.ProductRepository;
-import repository.SaleRepository;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import static maper.Mapper.toDTO;
+import static com.test.supermarket.mapper.Mapper.toDTO;
 
 @Service
 public class SaleService implements ISaleService {

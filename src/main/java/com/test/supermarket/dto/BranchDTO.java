@@ -1,4 +1,4 @@
-package dto;
+package com.test.supermarket.dto;
 
 import lombok.*;
 

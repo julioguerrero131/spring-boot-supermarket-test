@@ -1,6 +1,6 @@
-package repository;
+package com.test.supermarket.repository;
 
-import model.Product;
+import com.test.supermarket.model.Product;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.Optional;

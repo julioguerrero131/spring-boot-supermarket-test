@@ -1,4 +1,4 @@
-package model;
+package com.test.supermarket.model;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;

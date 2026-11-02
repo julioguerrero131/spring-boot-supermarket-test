@@ -1,11 +1,10 @@
-package controller;
+package com.test.supermarket.controller;
 
-import dto.BranchDTO;
-import model.Branch;
+import com.test.supermarket.dto.BranchDTO;
+import com.test.supermarket.service.IBranchService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-import service.IBranchService;
 
 import java.net.URI;
 import java.util.List;

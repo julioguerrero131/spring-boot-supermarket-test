@@ -1,12 +1,12 @@
-package maper;
+package com.test.supermarket.mapper;
 
-import dto.BranchDTO;
-import dto.ProductDTO;
-import dto.SaleDTO;
-import dto.SaleDetailDTO;
-import model.Branch;
-import model.Product;
-import model.Sale;
+import com.test.supermarket.dto.BranchDTO;
+import com.test.supermarket.dto.ProductDTO;
+import com.test.supermarket.dto.SaleDTO;
+import com.test.supermarket.dto.SaleDetailDTO;
+import com.test.supermarket.model.Branch;
+import com.test.supermarket.model.Product;
+import com.test.supermarket.model.Sale;
 
 public class Mapper {
     // Mapper Product to ProductDTO
@@ -56,6 +56,8 @@ public class Mapper {
                 .date(s.getDate())
                 .state(s.getState())
                 .branchId(s.getBranch().getId())
+                .details(details)
+                .total(total)
                 .build();
     }
 }

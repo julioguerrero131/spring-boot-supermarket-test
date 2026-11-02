@@ -1,11 +1,10 @@
-package controller;
+package com.test.supermarket.controller;
 
-import dto.ProductDTO;
-import model.Product;
+import com.test.supermarket.dto.ProductDTO;
+import com.test.supermarket.service.IProductService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-import service.IProductService;
 
 import java.net.URI;
 import java.util.List;

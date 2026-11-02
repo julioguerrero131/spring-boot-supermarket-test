@@ -1,12 +1,12 @@
-package service;
+package com.test.supermarket.service;
 
-import dto.BranchDTO;
-import exception.NotFoundException;
-import maper.Mapper;
-import model.Branch;
+import com.test.supermarket.dto.BranchDTO;
+import com.test.supermarket.exception.NotFoundException;
+import com.test.supermarket.mapper.Mapper;
+import com.test.supermarket.model.Branch;
+import com.test.supermarket.repository.BranchRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import repository.BranchRepository;
 
 import java.util.List;
 

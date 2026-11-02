@@ -1,4 +1,4 @@
-package model;
+package com.test.supermarket.model;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -10,12 +10,12 @@ import lombok.*;
 @NoArgsConstructor @AllArgsConstructor
 @Builder
 @Entity
-public class Product {
+public class Branch {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String name;
-    private String category;
-    private Double price;
-    private Integer quantity;
+    private String address;
+
+
 }

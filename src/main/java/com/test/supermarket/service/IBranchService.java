@@ -1,6 +1,6 @@
-package service;
+package com.test.supermarket.service;
 
-import dto.BranchDTO;
+import com.test.supermarket.dto.BranchDTO;
 
 import java.util.List;
 

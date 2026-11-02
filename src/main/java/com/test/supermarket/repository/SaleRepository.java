@@ -1,6 +1,6 @@
-package repository;
+package com.test.supermarket.repository;
 
-import model.Sale;
+import com.test.supermarket.model.Sale;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 public interface SaleRepository extends JpaRepository<Sale,Long> {
