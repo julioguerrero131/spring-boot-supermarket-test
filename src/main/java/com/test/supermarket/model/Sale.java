@@ -22,6 +22,11 @@ public class Sale {
     private Double total;
     @ManyToOne
     private Branch branch;
-    @OneToMany(mappedBy = "sale", cascade = CascadeType.ALL, orphanRemoval = true)
+    @OneToMany(
+            mappedBy = "sale",
+            cascade = CascadeType.ALL,
+            orphanRemoval = true,
+            fetch = FetchType.EAGER
+    )
     private List<SaleDetail> details = new ArrayList<>();
 }
