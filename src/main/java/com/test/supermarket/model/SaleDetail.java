@@ -15,11 +15,11 @@ public class SaleDetail {
     private Long id;
 
     // Venta
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.LAZY)
     private Sale sale;
 
     // Producto
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.LAZY)
     private Product prod;
 
     private Integer quantProd;
