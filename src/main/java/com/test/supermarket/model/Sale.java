@@ -22,6 +22,6 @@ public class Sale {
     private Double total;
     @ManyToOne
     private Branch branch;
-    @OneToMany (mappedBy = "sale")
+    @OneToMany(mappedBy = "sale", cascade = CascadeType.ALL, orphanRemoval = true)
     private List<SaleDetail> details = new ArrayList<>();
 }

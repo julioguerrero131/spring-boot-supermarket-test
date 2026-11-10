@@ -13,6 +13,7 @@ import com.test.supermarket.repository.ProductRepository;
 import com.test.supermarket.repository.SaleRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -42,6 +43,7 @@ public class SaleService implements ISaleService {
     }
 
     @Override
+    @Transactional
     public SaleDTO createSale(SaleDTO saleDto) {
         // Validation
         if (saleDto == null) throw new RuntimeException("saleDto is null");
@@ -59,7 +61,6 @@ public class SaleService implements ISaleService {
         sale.setDate(saleDto.getDate());
         sale.setState(saleDto.getState());
         sale.setBranch(b);
-        sale.setTotal(saleDto.getTotal());
 
         // Sale Detail
         List<SaleDetail> details = new ArrayList<>();
@@ -80,6 +81,11 @@ public class SaleService implements ISaleService {
 
         // Save Details
         sale.setDetails(details);
+
+        // Total calculated from details (server-side source of truth)
+        sale.setTotal(details.stream()
+                .mapToDouble(d -> d.getPrice() * d.getQuantProd())
+                .sum());
 
         // Save in BD
         return Mapper.toDTO(saleRepo.save(sale));
