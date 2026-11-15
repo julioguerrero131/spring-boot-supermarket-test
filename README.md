@@ -24,6 +24,7 @@ REST API for managing a supermarket: **products**, **branches**, and **sales** w
   - [Products](#products)
   - [Branches](#branches)
   - [Sales](#sales)
+- [API Testing with Postman](#api-testing-with-postman)
 
 ---
 
@@ -164,6 +165,9 @@ spring-boot-supermarket-test/
 ├── pom.xml
 ├── mvnw / mvnw.cmd              # Maven Wrapper
 ├── .env                         # Local environment variables (not versioned)
+├── docs
+│   ├── postman.png              # Postman screenshot
+│   └── postman-collection.json  # Exported Postman collection
 └── src
     ├── main
     │   ├── java/com/test/supermarket
@@ -543,3 +547,34 @@ Updates only the sale's general fields:
 #### `DELETE /api/sales/{id}`
 
 Deletes the sale and, in cascade, all of its details (`orphanRemoval = true`). Returns `204 No Content`.
+
+---
+
+## API Testing with Postman
+
+The API was tested in Postman covering the **four operations of each entity**: list, create, update, and delete.
+
+| Entity | Operation | Method | Endpoint | Expected response |
+|---|---|---|---|---|
+| Products | List | `GET` | `/api/products` | `200 OK` |
+| Products | Create | `POST` | `/api/products` | `201 Created` |
+| Products | Update | `PUT` | `/api/products/{id}` | `200 OK` |
+| Products | Delete | `DELETE` | `/api/products/{id}` | `204 No Content` |
+| Branches | List | `GET` | `/api/branches` | `200 OK` |
+| Branches | Create | `POST` | `/api/branches` | `201 Created` |
+| Branches | Update | `PUT` | `/api/branches/{id}` | `200 OK` |
+| Branches | Delete | `DELETE` | `/api/branches/{id}` | `204 No Content` |
+| Sales | List | `GET` | `/api/sales` | `200 OK` |
+| Sales | Create | `POST` | `/api/sales` | `201 Created` |
+| Sales | Update | `PUT` | `/api/sales/{id}` | `200 OK` |
+| Sales | Delete | `DELETE` | `/api/sales/{id}` | `204 No Content` |
+
+The exported collection is available at [`docs/postman-collection.json`](docs/postman-collection.json). To use it:
+
+1. Open Postman and select **Import**.
+2. Choose `docs/postman-collection.json`.
+3. Start the API locally (`http://localhost:8080`) and run the requests.
+
+> When testing sales, create the products and the branch first, since a sale references them by ID and product name.
+
+![Postman collection running against the API](docs/postman.png)
