@@ -1,5 +1,6 @@
 package com.test.supermarket.dto;
 
+import com.test.supermarket.model.SaleState;
 import lombok.*;
 
 import java.time.LocalDate;
@@ -12,7 +13,7 @@ public class SaleDTO {
     // Datos Venta
     private Long id;
     private LocalDate date;
-    private String state;
+    private SaleState state;
 
     // Datos Sucursal
     private Long branchId;

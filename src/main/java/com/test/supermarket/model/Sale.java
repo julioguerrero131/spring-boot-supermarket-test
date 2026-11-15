@@ -18,7 +18,8 @@ public class Sale {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private LocalDate date;
-    private String state;
+    @Enumerated(EnumType.STRING)
+    private SaleState state;
     private Double total;
     @ManyToOne
     private Branch branch;
